@@ -1,0 +1,4 @@
+FROM alpine
+RUN apk add --no-cache git tar
+WORKDIR /data
+CMD ["sh", "-c", "tar -czf backup.tar.gz /data && echo 'Backup Complete'"]
